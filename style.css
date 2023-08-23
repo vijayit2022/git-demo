@@ -1,0 +1,62 @@
+body {
+    background: black;
+    overflow: hidden;
+  }
+  
+  h1 {
+    text-align: center;
+    margin: 200px auto;
+    font-size: 4.5rem;
+    font-family: arial;
+    font-weight: 900;
+    color: transparent;
+    overflow: hidden;
+    background: linear-gradient(45deg, black 30%, transparent 30%, transparent 70%, black 70%), linear-gradient(-45deg, black 30%, transparent 30%, transparent 70%, black 70%), linear-gradient(90deg, crimson 30%, transparent 30%, transparent 70%, crimson 70%)red;
+    background-size: 20px 20px, 20px 20px, 1px 1px;
+    background-position: 0 0, 0 0, 0 0;
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 4px white;
+    filter: drop-shadow(0 0 1px black)drop-shadow(0 0 1px black)drop-shadow(0 0 1px black)drop-shadow(0 0 1px black)drop-shadow(0 0 1px black)drop-shadow(0 0 1px black)drop-shadow(0 0 1px black)drop-shadow(0 0 1px black)drop-shadow(0 0 2px crimson);
+    animation: bg-shift 1s ease-in-out infinite alternate-reverse, swing 2s ease-in-out infinite;
+  }
+  
+  
+  @keyframes bg-shift {
+    from {
+      background-position: 0 50px;
+    }
+  }
+  
+  @keyframes bg-shift2 {
+    0% {
+      background-position: 0 50px;
+    }
+  
+    50% {
+  
+      background-position: 0 -50px;
+  
+    }
+  
+    100% {
+      background-position: 0 50px;
+    }
+  }
+  
+  @keyframes swing {
+    0% {
+      transform-origin: top;
+      transform: perspective(550px)rotatex(55deg);
+    }
+  
+    50% {
+      transform: perspective(550px)rotatex(-55deg);
+    }
+  
+    100% {
+      transform-origin: top;
+      transform: perspective(550px)rotatex(55deg);
+  
+    }
+  }
+  
